@@ -1,91 +1,132 @@
-import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiPostgresql } from 'react-icons/si';
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+  FaReact,
+  FaNodeJs,
+  FaPython,
+} from "react-icons/fa";
+import { SiTailwindcss, SiMongodb, SiPostgresql } from "react-icons/si";
 
 const Projects = () => {
   const projects = [
     {
-      title: 'University Website',
-      description: 'A full-stack e-commerce solution with admin dashboard, payment integration, and real-time inventory management.',
-      image: 'iust.png',
+      title: "University Website",
+      description:
+        "A dynamic university website with course listings, faculty profiles, notice board, and a responsive design to enhance student engagement.",
+      image: "iust.png",
       technologies: [
-        { icon: FaReact, name: 'React' },
-        { icon: FaNodeJs, name: 'Node.js' },
-        { icon: SiMongodb, name: 'MongoDB' },
-        { icon: SiTailwindcss, name: 'Bootstrap' },
+        { icon: FaReact, name: "React" },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiMongodb, name: "MongoDB" },
+        { icon: SiTailwindcss, name: "Bootstrap" },
       ],
-      github: 'https://github.com/hyder-fida/University-Website',
-      live: 'https://iustwebsite.netlify.app/',
+      github: "https://github.com/hyder-fida/University-Website",
+      live: "https://iustwebsite.netlify.app/",
       featured: true,
     },
     {
-      title: 'Website Solutions App',
-      description: 'A collaborative project management tool with real-time updates, team chat, and advanced analytics.',
-      image: 'yaam.png',
+      title: "Website Solutions App",
+      description:
+        "A platform for managing client website projects with task assignments, live updates, and real-time collaboration among developers.",
+      image: "yaam.png",
       technologies: [
-        { icon: FaReact, name: 'React' },
-        { icon: FaNodeJs, name: 'Node.js' },
-        { icon: SiPostgresql, name: 'PostgreSQL' },
-        { icon: SiTailwindcss, name: 'Tailwind' },
+        { icon: FaReact, name: "React" },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiPostgresql, name: "PostgreSQL" },
+        { icon: SiTailwindcss, name: "Tailwind" },
       ],
-      github: 'https://github.com/faahadyws/yaamwebsolutions',
-      live: 'https://yaamwebsolutions.com/',
+      github: "https://github.com/faahadyws/yaamwebsolutions",
+      live: "https://yaamwebsolutions.com/",
       featured: true,
     },
     {
-      title: 'Hotel Heaven Heights',
-      description: 'A beautiful weather application with forecasts, interactive maps, and personalized recommendations.',
-      image: 'heavenheights.png',
+      title: "Hotel Heaven Heights",
+      description:
+        "An interactive hotel booking website with weather integration, contact options, gallery, and a responsive user-friendly layout.",
+      image: "heavenheights.png",
       technologies: [
-        { icon: FaReact, name: 'React' },
-        { icon: FaPython, name: 'Node js' },
-        { icon: SiTailwindcss, name: 'Tailwind' },
+        { icon: FaReact, name: "React" },
+        { icon: FaPython, name: "Node js" },
+        { icon: SiTailwindcss, name: "Tailwind" },
       ],
-      github: 'https://github.com/faahadyws/hotelheavenheights',
-      live: 'https://heavenheights.in/',
+      github: "https://github.com/faahadyws/hotelheavenheights",
+      live: "https://heavenheights.in/",
       featured: false,
     },
     {
-      title: 'Hotel Best Palace',
-      description: 'A modern blogging platform with markdown support, SEO optimization, and social sharing features.',
-      image: 'bestpalace.png',
+      title: "Hotel Best Palace",
+      description:
+        "A fully functional hotel website with room showcase, booking functionality, and modern UI to streamline guest engagement.",
+      image: "bestpalace.png",
       technologies: [
-        { icon: FaReact, name: 'React' },
-        { icon: FaNodeJs, name: 'Node.js' },
-        { icon: SiMongodb, name: 'MongoDB' },
+        { icon: FaReact, name: "React" },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiMongodb, name: "MongoDB" },
       ],
-      github: 'https://github.com/fidayws/HotelBestPalace',
-      live: 'https://hotelbestpalace.com/',
+      github: "https://github.com/fidayws/HotelBestPalace",
+      live: "https://hotelbestpalace.com/",
       featured: false,
     },
     {
-      title: 'Portfolio Website',
-      description: 'A responsive portfolio website showcasing projects and skills with smooth animations and modern design.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: "Portfolio Website",
+      description:
+        "My personal portfolio to showcase development work, skills, contact info, and project demos with animated sections and responsive design.",
+      image: "portfolio.png",
       technologies: [
-        { icon: FaReact, name: 'React' },
-        { icon: SiTailwindcss, name: 'Tailwind' },
+        { icon: FaReact, name: "React" },
+        { icon: SiTailwindcss, name: "Tailwind" },
       ],
-      github: 'https://github.com/yourusername/portfolio',
-      live: 'https://portfolio-demo.com',
+      github: "https://github.com/hyder-fida/my-portfolio",
+      live: "https://fidaHussainMir.netlify.app",
       featured: false,
     },
     {
-      title: 'Chat Application',
-      description: 'Real-time chat application with rooms, private messaging, file sharing, and emoji support.',
-      image: 'https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800',
+      title: "Diabetes Prediction Using ML",
+      description:
+        "A machine learning web app that predicts diabetes likelihood based on patient input, trained on real health datasets.",
+      image: "diabetes.png",
       technologies: [
-        { icon: FaReact, name: 'React' },
-        { icon: FaNodeJs, name: 'Node.js' },
-        { icon: SiMongodb, name: 'MongoDB' },
+        { icon: FaReact, name: "React" },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiMongodb, name: "MongoDB" },
       ],
-      github: 'https://github.com/yourusername/chat-app',
-      live: 'https://chat-demo.com',
+      github: "https://github.com/hyder-fida/diabetesApp",
+      live: "https://github.com/hyder-fida/diabetesApp",
+      featured: false,
+    },
+    {
+      title: "E-Commerce App",
+      description:
+        "A modern e-commerce platform with product filtering, shopping cart, user authentication, and MongoDB-powered backend.",
+      image: "myntra.jpeg",
+      technologies: [
+        { icon: FaReact, name: "React" },
+        { icon: FaNodeJs, name: "Node.js" },
+        { icon: SiMongodb, name: "MongoDB" },
+      ],
+      github: "https://github.com/hyder-fida/E-commerce-App",
+      live: "https://github.com/hyder-fida/E-commerce-App",
+      featured: false,
+    },
+    {
+      title: "Trading App",
+      description:
+        "A basic trading dashboard simulating stock data analysis, graphs, and news integration using Python and MongoDB backend.",
+      image: "trading.jpeg",
+      technologies: [
+        { icon: FaReact, name: "React" },
+        { icon: SiMongodb, name: "MongoDB" },
+        { icon: FaPython, name: "Python" },
+        { icon: SiTailwindcss, name: "Material Ui" },
+      ],
+      github: "https://github.com/hyder-fida/TradingApp",
+      live: "https://github.com/hyder-fida/TradingApp",
       featured: false,
     },
   ];
 
-  const featuredProjects = projects.filter(project => project.featured);
-  const otherProjects = projects.filter(project => !project.featured);
+  const featuredProjects = projects.filter((project) => project.featured);
+  const otherProjects = projects.filter((project) => !project.featured);
 
   return (
     <section id="projects" className="section-padding bg-gray-50">
@@ -95,7 +136,8 @@ const Projects = () => {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Here are some of my recent projects that showcase my skills and passion for development.
+            Here are some of my recent projects that showcase my skills and
+            passion for development.
           </p>
         </div>
 
@@ -105,17 +147,21 @@ const Projects = () => {
             <div
               key={index}
               className={`grid lg:grid-cols-2 gap-12 items-center ${
-                index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
+                index % 2 === 1 ? "lg:grid-flow-col-dense" : ""
               }`}
             >
-              <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+              <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
                 <img
                   src={project.image}
                   alt={project.title}
                   className="rounded-xl shadow-2xl w-full h-80  card-hover"
                 />
               </div>
-              <div className={`${index % 2 === 1 ? 'lg:col-start-1' : ''} animate-slide-up`}>
+              <div
+                className={`${
+                  index % 2 === 1 ? "lg:col-start-1" : ""
+                } animate-slide-up`}
+              >
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
                   {project.title}
                 </h3>
