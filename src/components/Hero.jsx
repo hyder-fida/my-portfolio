@@ -64,7 +64,7 @@ const Hero = () => {
 
           {/* Main Content */}
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-down">
-            Hi, I'm <span className="text-yellow-300">Fida Hussain mir</span>
+            Hi, I'm <span className="text-yellow-300">Fida Hussain Mir</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-white/90 mb-8 animate-slide-up">
