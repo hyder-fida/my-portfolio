@@ -4,6 +4,9 @@ import {
   FaTwitter,
   FaEnvelope,
   FaPhone,
+  FaDownload,
+  FaCode,
+  FaPalette,
 } from "react-icons/fa";
 
 const Hero = () => {
@@ -21,117 +24,209 @@ const Hero = () => {
     }
   };
 
+  const downloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/file/d/1BRe7Fse156s7nVbCWhvR5GGqJaakGFtF/view?usp=drive_link";
+    link.download = "Fida_Hussain_Mir_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const socialLinks = [
     {
       icon: FaGithub,
       href: "https://github.com/hyder-fida",
       label: "GitHub",
+      color: "hover:text-gray-900",
     },
     {
       icon: FaLinkedin,
       href: "https://www.linkedin.com/in/fida-hussain-b9a047239/",
       label: "LinkedIn",
+      color: "hover:text-blue-600",
     },
     {
       icon: FaTwitter,
       href: "https://x.com/Fidaa37298252",
       label: "Twitter",
+      color: "hover:text-blue-400",
     },
   ];
 
- return (
-  <section
-    id="home"
-    className="flex items-center justify-center gradient-bg relative overflow-hidden min-h-screen"
-  >
-    {/* Background Elements */}
-    <div className="absolute inset-0 opacity-20">
-      <div className="absolute top-10 left-10 w-72 h-72 bg-white rounded-full mix-blend-multiply filter blur-xl animate-pulse"></div>
-      <div className="absolute top-10 right-10 w-72 h-72 bg-yellow-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-2000"></div>
-      <div className="absolute -bottom-8 left-20 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl animate-pulse animation-delay-4000"></div>
-    </div>
-
-    <div className="w-full max-w-6xl px-4 text-center relative z-10 py-12 sm:py-16">
-      <div className="animate-fade-in">
-        {/* Profile Image */}
-        <div className="mb-6">
-          <img
-            src="/IMG_9846.jpg"
-            alt="Profile"
-            className="w-32 h-32 sm:w-40 sm:h-40 rounded-full mx-auto shadow-2xl border-4 border-white/30 transform hover:scale-105 transition-transform duration-300"
-          />
-        </div>
-
-        {/* Main Content */}
-        <h1 className="text-4xl md:text-6xl font-bold text-white mb-4 animate-slide-down">
-          Hi, I'm <span className="text-yellow-300">Fida Hussain Mir</span>
-        </h1>
-
-        <p className="text-lg md:text-xl text-white/90 mb-4 animate-slide-up">
-          Full Stack Developer & UI/UX Designer
-        </p>
-
-        <p className="text-base md:text-lg text-white/80 mb-8 max-w-2xl mx-auto animate-slide-up">
-          I create beautiful, responsive web applications with modern
-          technologies. Passionate about clean code, user experience, and
-          bringing ideas to life through technology.
-        </p>
-
-        {/* Contact Info */}
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-6 mb-8 text-white/90 text-sm sm:text-base">
-          <div className="flex items-center space-x-2">
-            <FaEnvelope className="text-yellow-300" />
-            <span>hyderfida14@gmail.com</span>
-          </div>
-          <div className="flex items-center space-x-2">
-            <FaPhone className="text-yellow-300" />
-            <span>+917006106504</span>
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row justify-center items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-10">
-          <button
-            onClick={scrollToContact}
-            className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-          >
-            Get In Touch
-          </button>
-          <button
-            onClick={scrollToProjects}
-            className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-gray-900 font-semibold py-3 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
-          >
-            View My Work
-          </button>
-        </div>
-
-        {/* Social Links */}
-        <div className="flex justify-center space-x-5 py-2">
-          {socialLinks.map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-white/80 hover:text-yellow-300 text-2xl transform hover:scale-110 transition-all duration-300"
-              aria-label={social.label}
-            >
-              <social.icon />
-            </a>
+  return (
+    <section
+      id="home"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800"
+    >
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-4000"></div>
+        
+        {/* Floating particles */}
+        <div className="absolute inset-0">
+          {[...Array(20)].map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-2 h-2 bg-white rounded-full opacity-30 animate-float"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animationDelay: `${Math.random() * 5}s`,
+                animationDuration: `${3 + Math.random() * 4}s`,
+              }}
+            ></div>
           ))}
         </div>
       </div>
-    </div>
 
-    {/* Scroll Indicator */}
-    <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 animate-bounce-slow">
-      <div className="w-5 h-8 border-2 border-white/50 rounded-full flex justify-center">
-        <div className="w-1 h-2.5 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side - Content */}
+          <div className="text-center lg:text-left animate-fade-in-up">
+            {/* Greeting */}
+            <div className="inline-flex items-center px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-white/90 text-sm font-medium mb-6 animate-slide-down">
+              <span className="animate-wave mr-2">👋</span>
+              Hello, I'm
+            </div>
+
+            {/* Name */}
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
+              <span className="block">Fida Hussain</span>
+              <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 bg-clip-text text-transparent animate-gradient">
+                Mir
+              </span>
+            </h1>
+
+            {/* Role */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-8">
+              <div className="flex items-center space-x-2 text-white/90">
+                <FaCode className="text-yellow-400" />
+                <span className="text-xl font-medium">Full Stack Developer</span>
+              </div>
+              <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+              <div className="flex items-center space-x-2 text-white/90">
+                <FaPalette className="text-pink-400" />
+                <span className="text-xl font-medium">UI/UX Designer</span>
+              </div>
+            </div>
+
+            {/* Description */}
+            <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+              Passionate about creating beautiful, responsive web applications with modern
+              technologies. I turn complex problems into simple, elegant solutions.
+            </p>
+
+            {/* Contact Info */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-6 mb-10 text-white/90">
+              <a
+                href="mailto:hyderfida14@gmail.com"
+                className="flex items-center space-x-2 hover:text-yellow-400 transition-colors duration-300"
+              >
+                <FaEnvelope className="text-yellow-400" />
+                <span>hyderfida14@gmail.com</span>
+              </a>
+              <a
+                href="tel:+917006106504"
+                className="flex items-center space-x-2 hover:text-yellow-400 transition-colors duration-300"
+              >
+                <FaPhone className="text-yellow-400" />
+                <span>+91 7006106504</span>
+              </a>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+              <button
+                onClick={scrollToContact}
+                className="group relative px-8 py-4 bg-gradient-to-r from-yellow-400 to-orange-500 text-gray-900 font-semibold rounded-full shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden"
+              >
+                <span className="relative z-10">Get In Touch</span>
+                <div className="absolute inset-0 bg-gradient-to-r from-yellow-300 to-orange-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </button>
+              
+              <button
+                onClick={scrollToProjects}
+                className="px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full backdrop-blur-sm hover:bg-white/10 hover:border-white/50 transform hover:scale-105 transition-all duration-300"
+              >
+                View My Work
+              </button>
+              
+              <button
+                onClick={downloadResume}
+                className="px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-full border border-white/20 hover:bg-white/20 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+              >
+                <FaDownload className="text-sm" />
+                <span>Resume</span>
+              </button>
+            </div>
+
+            {/* Social Links */}
+            <div className="flex justify-center lg:justify-start space-x-6">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`w-12 h-12 bg-white/10 backdrop-blur-sm rounded-full flex items-center justify-center text-white/80 ${social.color} transform hover:scale-110 transition-all duration-300 border border-white/20 hover:border-white/40`}
+                  aria-label={social.label}
+                >
+                  <social.icon className="text-xl" />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Side - Profile Image */}
+          <div className="relative flex justify-center lg:justify-end animate-fade-in-right">
+            <div className="relative">
+              {/* Decorative rings */}
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-yellow-400 via-pink-400 to-purple-400 animate-spin-slow p-1">
+                <div className="w-full h-full bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 rounded-full"></div>
+              </div>
+              
+              {/* Profile image container */}
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-500">
+               <div className="relative aspect-square w-80 sm:w-96 lg:w-[450px] rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-500">
+                    <img
+                      src="/IMG_9846.jpg"
+                      alt="Fida Hussain Mir"
+                      className="w-full h-full object-cover object-top"
+                    />
+                  </div>
+
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+              </div>
+
+              {/* Floating badges */}
+              <div className="absolute top-8 -right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-float">
+                <span className="text-sm font-semibold text-gray-800">3+ Years</span>
+              </div>
+              
+              <div className="absolute bottom-8 -left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-float-delayed">
+                <span className="text-sm font-semibold text-gray-800">20+ Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
-);
 
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="flex flex-col items-center text-white/60">
+          <span className="text-sm mb-2">Scroll down</span>
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/50 rounded-full mt-2 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Hero;
