@@ -181,7 +181,7 @@ const Projects = () => {
   const otherProjects = projects.filter((project) => !project.featured);
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="projects" className="px-4 section-padding bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-20 w-72 h-72 bg-purple-300 rounded-full filter blur-3xl animate-pulse"></div>

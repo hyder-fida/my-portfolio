@@ -36,7 +36,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+    <section id="about" className="section-padding bg-gradient-to-br from-gray-50 to-white relative overflow-hidden px-4">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-64 h-64 bg-purple-300 rounded-full filter blur-3xl"></div>

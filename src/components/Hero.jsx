@@ -57,7 +57,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-800 px-2"
     >
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
@@ -205,7 +205,7 @@ const Hero = () => {
 
               {/* Floating badges */}
               <div className="absolute top-8 -right-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-float">
-                <span className="text-sm font-semibold text-gray-800">3+ Years</span>
+                <span className="text-sm font-semibold text-gray-800">2+ Years</span>
               </div>
               
               <div className="absolute bottom-8 -left-4 bg-white/90 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg animate-float-delayed">

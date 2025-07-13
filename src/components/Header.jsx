@@ -19,7 +19,7 @@ const Header = () => {
 
   const downloadResume = () => {
     const link = document.createElement("a");
-    link.href = "https://drive.google.com/file/d/1BRe7Fse156s7nVbCWhvR5GGqJaakGFtF/view?usp=drive_link";
+    link.href = "https://drive.google.com/file/d/14uzM0YOSB8AczwYnNYcJ--bZWJSP3LBl/view?usp=sharing";
     link.download = "Fida_Hussain_Mir_Resume.pdf";
     document.body.appendChild(link);
     link.click();

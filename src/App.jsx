@@ -21,7 +21,7 @@ function App() {
   }, []);
 
   return (
-    <div className="App min-h-screen bg-white">
+    <div className="App min-h-screen bg-white ">
       <Header />
       <main>
         <Hero />

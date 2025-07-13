@@ -110,7 +110,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-white relative overflow-hidden">
+    <section id="contact" className="section-padding bg-white relative overflow-hidden px-4">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-300 rounded-full filter blur-3xl animate-pulse"></div>
@@ -340,7 +340,7 @@ const Contact = () => {
         </div>
 
         {/* Bottom CTA */}
-        <div className="mt-20 text-center">
+        <div className="mt-20 text-center mb-4">
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-2xl p-8 text-white">
             <h3 className="text-2xl font-bold mb-4">Prefer a Different Way to Connect?</h3>
             <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
