@@ -28,7 +28,9 @@ const Footer = () => {
     { name: 'Home', id: 'home' },
     { name: 'About', id: 'about' },
     { name: 'Skills', id: 'skills' },
+    { name: 'Services', id: 'services' },
     { name: 'Projects', id: 'projects' },
+    { name: 'Blog', id: 'blog' },
     { name: 'Contact', id: 'contact' },
   ];
 
@@ -103,12 +105,13 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <button
-                    onClick={() => scrollToSection(link.id)}
+                  <a
+                    href={`#${link.id}`}
+                    onClick={(e) => { e.preventDefault(); scrollToSection(link.id); }}
                     className="text-gray-300 hover:text-purple-400 transition-colors duration-300 hover:translate-x-1 transform"
                   >
                     {link.name}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>

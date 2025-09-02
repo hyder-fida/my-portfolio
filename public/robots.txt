@@ -1,0 +1,5 @@
+# robots.txt for https://fidahussainmir.netlify.app/
+User-agent: *
+Allow: /
+
+Sitemap: https://fidahussainmir.netlify.app/sitemap.xml

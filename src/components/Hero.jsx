@@ -116,7 +116,9 @@ const Hero = () => {
             {/* Description */}
             <p className="text-lg sm:text-xl text-white/80 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
               Passionate about creating beautiful, responsive web applications with modern
-              technologies. I turn complex problems into simple, elegant solutions.
+              technologies. I turn complex problems into simple, elegant solutions. Based in
+              Kashmir (Srinagar & Budgam), J&K, I specialize as a Full Stack Developer and React.js/Next.js
+              Frontend Developer building high-performance products for clients across India.
             </p>
 
             {/* Contact Info */}

@@ -211,8 +211,10 @@ const Projects = () => {
               <div className={`${index % 2 === 1 ? "lg:col-start-2" : ""} relative group`}>
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                   <img
-                    src={project.image}
-                    alt={project.title}
+                    src={`/${project.image}`}
+                    alt={`${project.title} project screenshot`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   
@@ -312,8 +314,10 @@ const Projects = () => {
                 {/* Project Image */}
                 <div className="relative overflow-hidden">
                   <img
-                    src={project.image}
-                    alt={project.title}
+                    src={`/${project.image}`}
+                    alt={`${project.title} project thumbnail`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   

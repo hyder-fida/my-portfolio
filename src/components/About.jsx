@@ -2,7 +2,7 @@ import { FaGraduationCap, FaCode, FaUsers, FaRocket, FaHeart, FaCoffee } from "r
 
 const About = () => {
   const stats = [
-    { number: "3+", label: "Years Experience", icon: FaCode },
+    { number: "+2", label: "Years Experience", icon: FaCode },
     { number: "20+", label: "Projects Completed", icon: FaRocket },
     { number: "15+", label: "Happy Clients", icon: FaUsers },
     { number: "500+", label: "Cups of Coffee", icon: FaCoffee },
@@ -10,19 +10,25 @@ const About = () => {
 
   const timeline = [
     {
-      year: "2024",
+      year: "2025",
       title: "Senior Full Stack Developer",
       company: "Yaam Web Solutions",
       description: "Leading development teams and architecting scalable web applications using modern technologies.",
     },
     {
-      year: "2023",
+      year: "2024",
+      title: "Frontend React Intern",
+      company: "Next24 Tech",
+      description: "Contributed as a React.js intern building UI components, fixing bugs, and improving performance on client projects under mentorship.",
+    },
+    {
+      year: "2024",
       title: "Full Stack Developer",
       company: "Freelance",
       description: "Developed multiple client projects including e-commerce platforms and business websites.",
     },
     {
-      year: "2022",
+      year: "2023",
       title: "Frontend Developer",
       company: "Various Projects",
       description: "Specialized in React.js development and UI/UX implementation.",
