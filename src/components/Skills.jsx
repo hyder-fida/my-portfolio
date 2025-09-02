@@ -99,42 +99,25 @@ const Skills = () => {
                 </p>
               </div>
 
-              {/* Skills Grid */}
+              {/* Skills Grid (icons only) */}
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {category.skills.map((skill, skillIndex) => (
                   <div
                     key={skillIndex}
-                    className="group bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover relative overflow-hidden"
+                    className="group bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover relative overflow-hidden flex flex-col items-center justify-center"
+                    title={skill.name}
+                    aria-label={skill.name}
                   >
                     {/* Background gradient */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}></div>
-                    
-                    {/* Content */}
-                    <div className="relative z-10">
-                      {/* Icon */}
-                      <div className="flex items-center justify-center w-16 h-16 bg-gray-50 rounded-xl mb-4 group-hover:bg-white group-hover:shadow-md transition-all duration-300">
-                        <skill.icon className={`text-3xl ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
-                      </div>
-                      
-                      {/* Skill name */}
-                      <h4 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-gray-800">
-                        {skill.name}
-                      </h4>
-                      
-                      {/* Progress bar */}
-                      <div className="relative">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm font-medium text-gray-600">Proficiency</span>
-                          <span className="text-sm font-bold text-gray-900">{skill.level}%</span>
-                        </div>
-                        <div className="w-full bg-gray-200 rounded-full h-2">
-                          <div
-                            className={`h-2 rounded-full bg-gradient-to-r ${category.color} transition-all duration-1000 ease-out`}
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
-                        </div>
-                      </div>
+
+                    {/* Icon only */}
+                    <div className="relative z-10 flex items-center justify-center w-20 h-20 bg-gray-50 rounded-2xl group-hover:bg-white group-hover:shadow-md transition-all duration-300">
+                      <skill.icon className={`text-4xl ${skill.color} group-hover:scale-110 transition-transform duration-300`} />
                     </div>
+
+                    {/* Visible name */}
+                    <h4 className="mt-3 text-sm font-semibold text-gray-800">{skill.name}</h4>
 
                     {/* Hover effect border */}
                     <div className={`absolute inset-0 border-2 border-transparent group-hover:border-gradient-to-r ${category.color} rounded-xl transition-all duration-300 opacity-0 group-hover:opacity-100`}></div>

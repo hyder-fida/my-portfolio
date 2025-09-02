@@ -40,7 +40,30 @@ const Blog = () => {
             <article key={p.slug} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 card-hover">
               <h3 className="text-xl font-bold text-gray-900 mb-2">{p.title}</h3>
               <p className="text-gray-600 mb-4">{p.summary}</p>
-              <a href="#contact" className="text-purple-600 font-medium hover:text-purple-700">Work with me →</a>
+
+              <div className="prose prose-sm text-gray-700 space-y-3">
+                <p>
+                  React and Next.js are ideal for building fast, SEO‑friendly interfaces. For local businesses in Kashmir
+                  (Srinagar & Budgam), good UI plus Core Web Vitals can directly improve lead generation and rankings.
+                </p>
+                <p>
+                  When hiring, review GitHub, past work, and deployment quality (Lighthouse score, accessibility, mobile‑first).
+                  A clear scope, timelines, and communication cadence keep projects predictable.
+                </p>
+                <ul className="list-disc pl-5">
+                  <li>Modern stack: React/Next.js, Tailwind CSS, Node.js</li>
+                  <li>SEO: metadata, schema, sitemap, fast page load</li>
+                  <li>UX: accessible components, consistent design system</li>
+                </ul>
+                <p>
+                  See my <a href="#services" className="text-purple-600 hover:text-purple-700">Services</a> for options or
+                  <a href="#contact" className="text-purple-600 hover:text-purple-700"> contact me</a> to discuss.
+                </p>
+              </div>
+
+              <div className="mt-4">
+                <a href="#contact" className="text-purple-600 font-medium hover:text-purple-700">Work with me →</a>
+              </div>
             </article>
           ))}
         </div>
